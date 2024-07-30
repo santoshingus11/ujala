@@ -134,7 +134,7 @@
                                  <td><button class="badge badge-primary edit_btn" style="background-color:rgb(68, 97, 242);" data-match-id={{$d->id}} data-channel-id={{$d->channel_id}}>Edit</button>
                                     <a href="{{route('delete.cricket.match.new',$d->id)}}" class="badge badge-danger">Delete</a>
                                     </td>
-                                <td><a href="/admin/cricket/match-create/{{$d->id}}" @if($d->status==1) style="color:orange !important;" @else style="color:red !important;" @endif >{{ $d->game_title }}</a></td>
+                                <td><a href="{{url('/')}}/admin/cricket/match-create/{{$d->id}}" @if($d->status==1) style="color:orange !important;" @else style="color:red !important;" @endif >{{ $d->game_title }}</a></td>
                                 <td>{{$d->run_date_time}}</td>
                                 <td>{{ $d->status==0? 'Inactive' : 'Active' }}</td>
                                 <!--@if($d->status===0)-->

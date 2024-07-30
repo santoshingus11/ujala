@@ -73,7 +73,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <label for="" class="col-12 col-form-label" style="font-weight: bolder;">Team Name Playing*</label>
-                                        <input name="team_name" id="team_name" type="text" autocomplete="off" value="{{ $cricket_score[0]->team_name ?? ""}} " placeholder="Team Name" class="mx-input w-100" autofocus>
+                                        <input name="team_name" id="team_name" type="text" autocomplete="off" value="{{ $cricket_score_detail->play_team ?? ""}} " placeholder="Team Name" class="mx-input w-100" autofocus>
                                     </div>
                                     <div class="col-lg-6">
                                         <label for="" class="col-12 col-form-label" style="font-weight: bolder;">Add Run On Every Ball*</label>

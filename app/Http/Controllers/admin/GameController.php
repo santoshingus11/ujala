@@ -197,6 +197,7 @@ class GameController extends Controller
             $matchScore->update([
                 'game_id' => $request->game_id,
                 'team_name_a' => $request->team_name_a,
+                'play_team' => $request->team_name,
                 'target' => $request->target,
                 'play_wicket' => $request->play_wicket,
             ]);
@@ -205,6 +206,7 @@ class GameController extends Controller
             $cricket = new CricketMatchScoreDetail();
             $cricket->game_id = $request->game_id;
             $cricket->team_name_a = $request->team_name_a;
+            $cricket->play_team = $request->team_name;
             $cricket->target = $request->target;
             $cricket->play_wicket = $request->play_wicket ?? 0;
             $cricket->save();
@@ -213,7 +215,7 @@ class GameController extends Controller
         if (!empty($request->score)) {
             $matchScore = CricketMatchScoreDetail::where('game_id', $request->game_id)->first();
             if ($matchScore) {
-                if (is_int($request->score)) {
+                if (ctype_digit($request->score)) {
                     // Update the existing record
                     $score_in = $matchScore->play_score + $request->score;
                     $matchScore->update([
@@ -221,7 +223,7 @@ class GameController extends Controller
                     ]);
                 }
             } else {
-                if (is_int($request->score)) {
+                if (ctype_digit($request->score)) {
                     // Insert a new record
                     $cricket = new CricketMatchScoreDetail();
                     $cricket->game_id = $request->game_id;

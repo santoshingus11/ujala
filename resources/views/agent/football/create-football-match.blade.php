@@ -79,6 +79,14 @@
                                         <label for="" class="col-12 col-form-label" style="font-weight: bolder;">Team B Score*</label>
                                         <input name="score_b" id="team_name" type="number" autocomplete="off" value="{{$footballscore->score_b ?? ""}}" placeholder="Score" class="mx-input w-100" autofocus>
                                     </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="col-12 col-form-label" style="font-weight: bolder;">Start Time*</label>
+                                        <input name="start_time" id="start_time" type="datetime-local" autocomplete="off" value="" placeholder="Start Time" class="mx-input w-100" autofocus>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="col-12 col-form-label" style="font-weight: bolder;">End Time*</label>
+                                        <input name="end_time" id="end_time" type="datetime-local" autocomplete="off" value="" placeholder="End Time" class="mx-input w-100" autofocus>
+                                    </div>
                                     <div class="col-lg-6 text-left">
                                         <label for="toDate" class="col-12 col-form-label w-100 height-24"></label>
                                         <button class="btn btn-primary" style="height: 35px;">SUBMIT</button>

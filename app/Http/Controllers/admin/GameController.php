@@ -212,7 +212,8 @@ class GameController extends Controller
             $cricket->save();
         }
 
-        if (!empty($request->score)) {
+        if (isset($request->score) && $request->score !== '') {
+    
             $matchScore = CricketMatchScoreDetail::where('game_id', $request->game_id)->first();
             if ($matchScore) {
                 if (ctype_digit($request->score)) {

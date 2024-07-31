@@ -166,7 +166,9 @@ class FootballGameController extends Controller
                 'team_name_a' => $request->team_name_a,
                 'team_name_b' => $request->team_name_b,
                 'score_a' => $request->score_a,
-                'score_b' => $request->score_b
+                'score_b' => $request->score_b,
+                'start_time' => $request->start_time,
+                'end_time' => $request->end_time,
             ]);
         } else {
             // Insert a new record
@@ -175,7 +177,9 @@ class FootballGameController extends Controller
                 'team_name_a' => $request->team_name_a,
                 'team_name_b' => $request->team_name_b,
                 'score_a' => $request->score_a,
-                'score_b' => $request->score_b
+                'score_b' => $request->score_b,
+                 'start_time' => $request->start_time,
+                'end_time' => $request->end_time,
             ]);
         }
 
